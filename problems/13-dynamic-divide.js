@@ -18,9 +18,7 @@ divideByFive(50); // returns 10
 
 ***********************************************************************/
 
-function dynamicDivide(divisor) {
-  // Your code here
-}
+const dynamicDivide = (divisor) => (n) => n / divisor;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
