@@ -24,8 +24,23 @@ Example 3:
   console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 
 ***********************************************************************/
+
 function coinCollector(numCoins) {
-  // Your code here
+  let totalNumberOfCalls = numCoins - 1;
+  let res = [];
+
+  const fn = (n) => {
+    if (totalNumberOfCalls === 0) {
+      res.push(n);
+      return res;
+    } else {
+      res.push(n);
+      totalNumberOfCalls -= 1;
+      return fn;
+    }
+  };
+
+  return fn;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
